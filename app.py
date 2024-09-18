@@ -11,6 +11,14 @@ from dotenv import load_dotenv
 from langchain_groq import ChatGroq
 from langchain_core.prompts import PromptTemplate
 
+# setting up the page header here.
+hide_st_style = """
+                <style>
+                #MainMenu {visibility : hidden;}
+                footer {visibility : hidden;}
+                header {visibility : hidden;}
+                </style>
+                """
 
 load_dotenv()
 
@@ -242,9 +250,19 @@ def process_markdown_files(directory='Output/Evaluations'):
 # Streamlit UI
 
 st.set_page_config(
-    page_title="ATS - VectoScalar",
-    page_icon="📃"
+    page_title="Resume-JD-Match-Parser",
+    page_icon="📃",
+    layout="wide",
+    initial_sidebar_state="expanded",
+    menu_items={
+        'Get Help': 'https://www.linkedin.com/in/abhiiiman',
+        'Report a bug': "https://www.github.com/abhiiiman",
+        'About': "## GenAI powered Resume Parser with JD 🪄"
+    }
 )
+
+# removing all the default streamlit configs here
+st.markdown(hide_st_style, unsafe_allow_html=True)
 
 st.title("Resume Parser & JD Evaluation 🪄")
 
