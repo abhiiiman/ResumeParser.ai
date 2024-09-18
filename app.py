@@ -307,7 +307,7 @@ with col_1:
             st.balloons()
         
 with col_4:
-    if st.button("Flush Loaded Data 🗑️"):
+    if st.button("Flush all the Loaded Data 🗑️"):
         st.session_state.json_data = []
         st.session_state.markdown_data = []
         st.session_state.match_results = []
