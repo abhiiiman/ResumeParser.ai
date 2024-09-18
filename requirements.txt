@@ -1,0 +1,8 @@
+streamlit
+pandas
+python-docx
+PyPDF2
+langchain-groq
+langchain-core
+openpyxl
+python-dotenv

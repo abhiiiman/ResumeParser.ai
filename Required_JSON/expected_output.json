@@ -1,0 +1,90 @@
+{
+    "name": "Sanjay Kumar",
+    "email": "sanjay.kr114@gmail.com",
+    "phone_number": "9868949825",
+    "location": {
+      "address": "H. No.- D-2, M.R. Dayalpur, P.O. Gokul Pur, Delhi- 110094",
+      "city": "Delhi",
+      "postal_code": "110094",
+      "country": "India"
+    },
+    "career_objective": "A competent and organized individual with the ability to work in a team or individually, managing priorities with a strong work ethic, and seeking growth within a firm.",
+    "total_experience": "5 years",
+    "relevant_experience": "3+ years as HR Executive",
+    "current_job_title": "HR-Admin Executive",
+    "current_company": "Sirius Global Limited",
+    "previous_job_titles": [
+      "HR-Admin Executive/Office Coordinator",
+      "Lower Divisional Clerk",
+      "Store In-Charge",
+      "Financial Advisor"
+    ],
+    "previous_companies": [
+      "Lion Manpower Solutions Private Limited",
+      "1 Delhi Air Sqn. (Flg.)",
+      "Prakash Switchgear",
+      "Met Life India Insurance Co. Limited"
+    ],
+    "skills": {
+      "technical_skills": [
+        "MS-Office",
+        "Photoshop",
+        "Internet Savvy"
+      ],
+      "soft_skills": [
+        "Client Relations Management",
+        "Employee Relations",
+        "Record Keeping",
+        "Creative Problem Solver",
+        "Business Administration",
+        "Note taking",
+        "Answering queries",
+        "Decision making",
+        "Fast Learning",
+        "Leadership",
+        "Attention to detail",
+        "Coordination",
+        "Self-Motivated"
+      ]
+    },
+    "education": [
+      {
+        "degree": "MBA in Human Resource",
+        "institution": "S.M. University, Delhi",
+        "year_of_passing": "2012",
+        "division": "1st"
+      },
+      {
+        "degree": "BBA",
+        "institution": "G.G.S.I.P. University, Delhi",
+        "year_of_passing": "2009",
+        "division": "1st"
+      },
+      {
+        "degree": "XII (Science Stream)",
+        "institution": "CBSE, Delhi",
+        "year_of_passing": "2006",
+        "percentage": "52%"
+      },
+      {
+        "degree": "X (General)",
+        "institution": "CBSE, Delhi",
+        "year_of_passing": "2003",
+        "percentage": "65%"
+      }
+    ],
+    "languages": [
+      "Hindi",
+      "English"
+    ],
+    "hobbies": [
+      "Reading",
+      "Listening to Music",
+      "Poetry"
+    ],
+    "date_of_birth": "July 14, 1986",
+    "marital_status": "Unmarried",
+    "nationality": "Indian",
+    "references": "Available on request"
+  }
+  

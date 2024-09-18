@@ -1,0 +1,49 @@
+{
+  "name": "Candidate's full name",
+  "email": "Candidate's email address",
+  "phone_number": "Candidate's contact number",
+  "location": "Candidate's current location (city, state, country)",
+  "linkedin_profile": "URL to LinkedIn profile",
+  "github_profile": "URL to GitHub profile (if applicable)",
+  "portfolio_website": "URL to personal portfolio or website (if applicable)",
+  "career_objective": "Candidate's career objective or summary",
+  "total_experience": "Total years of work experience",
+  "relevant_experience": "Years of experience relevant to the job description",
+  "current_job_title": "Candidate's current job title",
+  "current_company": "Candidate's current company",
+  "previous_job_title": "Candidate's previous job titles (if any)",
+  "previous_companies": "List of previous companies worked at",
+  "skills": {
+    "technical_skills": "List of technical skills relevant to the job",
+    "soft_skills": "List of soft skills relevant to the job"
+  },
+  "education": {
+    "degree": "Highest degree obtained",
+    "institution": "Institution where the degree was obtained",
+    "year_of_passing": "Year of graduation"
+  },
+  "certifications": "List of certifications (if any)",
+  "projects": [
+    {
+      "project_name": "Name of the project",
+      "description": "Brief description of the project",
+      "technologies_used": "List of technologies/tools used",
+      "role": "Role in the project"
+    }
+  ],
+  "achievements": "List of major achievements (if any)",
+  "publications": "List of publications (if applicable)",
+  "languages": "Languages spoken and proficiency level",
+  "availability": "Notice period or availability to join",
+  "expected_salary": "Candidate's expected salary",
+  "current_salary": "Candidate's current salary",
+  "work_authorization": "Work authorization status (if required)",
+  "relocation_preference": "Willingness to relocate (yes/no)",
+  "references": [
+    {
+      "referee_name": "Name of the reference person",
+      "referee_contact": "Contact information of the referee",
+      "relationship": "Relationship with the referee"
+    }
+  ]
+}
