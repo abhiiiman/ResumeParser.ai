@@ -15,8 +15,8 @@ from langchain_core.prompts import PromptTemplate
 load_dotenv()
 
 llm = ChatGroq(temperature=1,
-             model_name=os.getenv("MODEL_NAME"),
-             api_key=os.getenv("GROQ_API_KEY"),
+             model_name=st.secrets["MODEL_NAME"],
+             api_key=st.secrets["GROQ_API_KEY"],
              model_kwargs={"response_format": {"type": "json_object"}})
 
 
