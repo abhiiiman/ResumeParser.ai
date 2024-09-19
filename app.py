@@ -383,3 +383,8 @@ if st.session_state.json_data:
 if st.session_state.match_results:
     with st.expander("Preview Resume Match Results with Job Description 🔍🪄", expanded=False):
         st.write(st.session_state.match_results)
+
+st.markdown(
+    "<footer style='text-align: center; padding: 10px;'><strong>Made with ❤️ by Abhijit x Llama 3.1 🦙</strong></footer>", 
+    unsafe_allow_html=True
+)
