@@ -11,14 +11,6 @@ from dotenv import load_dotenv
 from langchain_groq import ChatGroq
 from langchain_core.prompts import PromptTemplate
 
-# setting up the page header here.
-hide_st_style = """
-                <style>
-                #MainMenu {visibility : hidden;}
-                footer {visibility : hidden;}
-                header {visibility : hidden;}
-                </style>
-                """
 
 load_dotenv()
 
@@ -151,7 +143,7 @@ def match_JD_with_resume(JD_text, candidate_json):
             )
     
     prompt_template = """
-        You are tasked with matching the Job Description provided with the candidate's JSON data and returning a match score out of 100. After scoring, you must determine the Application Status based on this logic: if the score is less than or equal to 50, the status should be "Rejected"; if greater than 50, it should be "Shortlisted".
+        You are tasked with matching the Job Description provided with the candidate's JSON data and returning a match score out of 100. After scoring, you must determine the Application Status based on this logic: if the score is less than or equal to 50, the status should be "Rejected"; if greater than 60, it should be "Shortlisted".
 
         Please return the results strictly in the following format without any additional explanations:
         Match Score: <score>
@@ -250,19 +242,9 @@ def process_markdown_files(directory='Output/Evaluations'):
 # Streamlit UI
 
 st.set_page_config(
-    page_title="Resume-JD-Match-Parser",
-    page_icon="📃",
-    layout="wide",
-    initial_sidebar_state="expanded",
-    menu_items={
-        'Get Help': 'https://www.linkedin.com/in/abhiiiman',
-        'Report a bug': "https://www.github.com/abhiiiman",
-        'About': "## GenAI powered Resume Parser with JD 🪄"
-    }
+    page_title="ATS - VectoScalar",
+    page_icon="📃"
 )
-
-# removing all the default streamlit configs here
-st.markdown(hide_st_style, unsafe_allow_html=True)
 
 st.title("Resume Parser & JD Evaluation 🪄")
 
@@ -272,10 +254,10 @@ jd_file = st.sidebar.file_uploader("Upload Job Description (PDF/DOCX)", type=["p
 
 if jd_file is not None:
     jd_text = load_jd(jd_file)
-    st.sidebar.success("Job Description Uploaded Successfully!")
+    st.sidebar.success("Job Description Processed Successfully!")
 else:
     jd_text = ""
-    st.sidebar.warning("Please upload a Job Description.")
+    st.sidebar.warning("Upload a Job Description to get started")
     
 st.header("Upload Candidate Resumes 📂")
 uploaded_files = st.file_uploader("Choose PDF or DOCX files", type=["pdf", "docx"], accept_multiple_files=True)
@@ -307,7 +289,7 @@ with col_1:
             st.balloons()
         
 with col_4:
-    if st.button("Flush all the Loaded Data 🗑️"):
+    if st.button("Flush Loaded Data 🗑️"):
         st.session_state.json_data = []
         st.session_state.markdown_data = []
         st.session_state.match_results = []
@@ -383,5 +365,8 @@ if st.session_state.json_data:
 if st.session_state.match_results:
     with st.expander("Preview Resume Match Results with Job Description 🔍🪄", expanded=False):
         st.write(st.session_state.match_results)
-
-st.markdown("<footer style='text-align: center; padding: 10px;'><strong>Made with ❤️ by Abhijit x Llama 3.1 🦙</strong></footer>", unsafe_allow_html=True)
+        
+st.markdown(
+    "<footer style='text-align: center; padding: 10px;'><strong>Made with ❤️ by Abhijit x Llama 3.1 🦙</strong></footer>", 
+    unsafe_allow_html=True
+)
