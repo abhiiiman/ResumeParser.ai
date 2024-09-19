@@ -19,7 +19,6 @@ llm = ChatGroq(temperature=1,
              api_key=st.secrets["GROQ_API_KEY"],
              model_kwargs={"response_format": {"type": "json_object"}})
 
-
 # Initialize Session State
 if 'json_data' not in st.session_state:
     st.session_state.json_data = []
@@ -241,10 +240,20 @@ def process_markdown_files(directory='Output/Evaluations'):
 
 # Streamlit UI
 
+# setting up the page header here.
+hide_st_style = """
+                <style>
+                #MainMenu {visibility : hidden;}
+                header {visibility : hidden;}
+                </style>
+                """
+
 st.set_page_config(
-    page_title="ATS - VectoScalar",
+    page_title="GenAI Resume-JD Parser",
     page_icon="📃"
 )
+# removing all the default streamlit configs here
+st.markdown(hide_st_style, unsafe_allow_html=True)
 
 st.title("Resume Parser & JD Evaluation 🪄")
 
