@@ -259,7 +259,7 @@ st.title("Resume Parser & JD Evaluation 🪄")
 
 # Sidebar for Job Description Upload
 st.sidebar.header("Job Description 📃")
-jd_file = st.sidebar.file_uploader("Upload Job Description (PDF/DOCX)", type=["pdf", "docx"])
+jd_file = st.sidebar.file_uploader("Upload Job Description (PDF/DOCX)", type=["pdf", "docx"], key = "jd_file")
 
 if jd_file is not None:
     jd_text = load_jd(jd_file)
@@ -302,7 +302,10 @@ with col_4:
         st.session_state.json_data = []
         st.session_state.markdown_data = []
         st.session_state.match_results = []
+        if 'jd_file' in st.session_state:
+            del st.session_state.jd_file
         st.success("All data has been cleared 👍")
+        st.rerun()
 
 with col_3:
     if st.button("Download Evaluated Data ⚡"):
